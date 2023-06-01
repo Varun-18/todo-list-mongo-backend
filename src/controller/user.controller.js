@@ -98,6 +98,7 @@ const userLogout = (req, res) => {
     res.clearCookie("authToken",{sameSite:"none", httpOnly: true, secure: true }).send(false);
   } catch (error) {
     console.log(error);
+    res.send("cant delete cookies")
   }
 };
 
