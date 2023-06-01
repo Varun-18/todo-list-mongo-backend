@@ -95,7 +95,7 @@ const deleteTask = async (req, res) => {
 
 const userLogout = (req, res) => {
   try {
-    res.clearCookie("authToken").send(false);
+    res.clearCookie("authToken",{sameSite:"none", httpOnly: true, secure: true }).send(false);
   } catch (error) {
     console.log(error);
   }
