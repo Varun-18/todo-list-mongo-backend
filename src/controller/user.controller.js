@@ -29,7 +29,7 @@ const login = async (req, res) => {
       const token = jwt.sign({ username: username }, process.env.KEY);
       res
         .status(200)
-        .cookie("authToken", token, { httpOnly: true })
+        .cookie("authToken", token, {sameSite:"none", httpOnly: true })
         .send(result);
     }
   } catch (error) {
