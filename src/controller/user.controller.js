@@ -95,7 +95,7 @@ const deleteTask = async (req, res) => {
 
 const userLogout = (req, res) => {
   try {
-    res.cookie("authToken","",{sameSite:"none", httpOnly: true, secure: true }).send(false);
+    res.cookie("authToken","",{sameSite:"none", httpOnly: true, secure: true }).set("Cache-Control", "no-store").send(false);
   } catch (error) {
     console.log(error);
     res.send("cant delete cookies")
