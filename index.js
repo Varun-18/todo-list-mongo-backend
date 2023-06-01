@@ -9,7 +9,7 @@ const userRouter = require("./src/routes/user.routes");
 
 dotenv.config();
 
-server.use(cors({ origin: "http://localhost:3000", credentials: true }));
+server.use(cors({ origin: "https://todo-list-mongo-frontend.vercel.app", credentials: true }));
 server.use(express.json());
 server.use(cookieParser());
 
