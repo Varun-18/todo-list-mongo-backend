@@ -19,7 +19,7 @@ userRouter.put("/updateTask", updateTask);
 userRouter.delete("/deleteTask/:id", deleteTask);
 
 
-userRouter.get("/logout", userLogout);
+userRouter.post("/logout", userLogout);
 
 
 
